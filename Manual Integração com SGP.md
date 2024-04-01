@@ -70,6 +70,7 @@ EOF
 ```
 
 # Crie o arquivo sistema na pasta /opt/genieacs/ext e inclua os dados abaixo.
+### Altere os dados das linhas 5,6 e 7 para os dados do seu SGP onde precisará criar o token e aplicação. 
 ```
 #!/usr/bin/env node
 let https = require( "https" );
@@ -226,3 +227,25 @@ now}, {value: auth.wifi_password});
  }
 }
 ```
+
+# Agora vamos configurar os dados do Gerenciador no SGP
+## Acesse Menu: SISTEMA >> GERENCIADOR DE CPE
+
+![image](https://github.com/joandson19/GenieACS/assets/36518985/44e3192d-972f-4d0e-8b31-922295305192)
+
+```
+{
+ "url": "http://XXX.XXX.XXX.XXX:7557",
+ "token": "INDEFINIDO"
+}
+```
+
+# Agora vamos configurar os dados do Roteador
+## AACESSE O CONTRATO DO CLIENTE PARA ALTERAR AS SEGUINTES INFORMAÇÕES:
+
+![image](https://github.com/joandson19/GenieACS/assets/36518985/fbc9d925-5d9b-47a5-be75-18d1026330e0)
+
+# SALVAR E JÁ SERÁ POSSÍVEL OBSERVAR A NOVA ABA "GERENCIADOR CPE"
+### QUE MOSTRARÁ AS INFORMAÇÕES DA SEGUINTE FORMA:
+
+![image](https://github.com/joandson19/GenieACS/assets/36518985/21160a23-75fe-4df1-99f9-d6844d005098)
