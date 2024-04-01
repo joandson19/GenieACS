@@ -1,9 +1,11 @@
 # Criar diretório e dar permissões 
+```
 mkdir -p /opt/genieacs
 mkdir -p /opt/genieacs/ext
 chown genieacs:genieacs /opt/genieacs/ext
-
+```
 # Configurando arquivos 
+```
 cat <<EOF > /etc/systemd/system/genieacs-cwmp.service
 [Unit]
 Description=GenieACS CWMP
@@ -15,7 +17,8 @@ ExecStart=/usr/bin/genieacs-cwmp
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 cat <<EOF > /etc/systemd/system/genieacs-nbi.service
 [Unit]
 Description=GenieACS NBI
@@ -27,7 +30,8 @@ ExecStart=/usr/bin/genieacs-nbi
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 cat <<EOF > /etc/systemd/system/genieacs-fs.service
 [Unit]
 Description=GenieACS FS
@@ -39,7 +43,8 @@ ExecStart=/usr/bin/genieacs-fs
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 cat <<EOF > /etc/systemd/system/genieacs-ui.service
 [Unit]
 Description=GenieACS UI
@@ -51,7 +56,8 @@ ExecStart=/usr/bin/genieacs-ui
 [Install]
 WantedBy=multi-user.target
 EOF
-
+```
+```
 cat <<EOF > /etc/logrotate.d/genieacs
 /var/log/genieacs/*.log /var/log/genieacs/*.yaml {
  daily
@@ -61,10 +67,10 @@ cat <<EOF > /etc/logrotate.d/genieacs
  dateext
 }
 EOF
-
+```
 
 # Crie o arquivo sistema na pasta /opt/genieacs/ext e inclua os dados abaixo.
-...
+```
 #!/usr/bin/env node
 let https = require( "https" );
 const options = (dados)=>{
@@ -118,12 +124,12 @@ parsedData.contratos[0].servico_wifi_channel_5,
  req.end()
 }
 exports.pppoeLoginByMac = pppoeLoginByMac;
-...
+```
 
 
 # Acesse o genieacs pela interface web ex: IP:3000
 ## Vá até admin >> provision e altere a default apagando tudo e incluindo os dados abaixo.
-
+```
 const hourly = Date.now(3600000);
 const every_ten_minutes = Date.now(600000);
 const dayly = Date.now(24*3600000);
@@ -158,6 +164,7 @@ declare("InternetGatewayDevice.LANDevice.*.Hosts.Host.*.IPAddress", {path: hourl
 hourly});
 declare("InternetGatewayDevice.LANDevice.*.Hosts.Host.*.MACAddress", {path: hourly, value:
 hourly});
+```
 
 ## Acesse também admin >> provision e altere a bootstrap apagando tudo e incluindo os dados abaixo.
 ```
