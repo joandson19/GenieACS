@@ -70,7 +70,7 @@ EOF
 ```
 
 # Crie o arquivo sistema na pasta /opt/genieacs/ext e inclua os dados abaixo.
-### Altere os dados das linhas 5,6 e 7 para os dados do seu SGP onde precisará criar o token e aplicação. 
+### Altere os dados das linhas 5,6,7,18 e 19 para os dados do seu SGP onde precisará criar o token e aplicação. 
 ```
 #!/usr/bin/env node
 let https = require( "https" );
