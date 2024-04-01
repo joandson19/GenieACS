@@ -64,7 +64,7 @@ EOF
 
 
 # Crie o arquivo sistema na pasta /opt/genieacs/ext e inclua os dados abaixo.
-
+...
 #!/usr/bin/env node
 let https = require( "https" );
 const options = (dados)=>{
@@ -118,7 +118,7 @@ parsedData.contratos[0].servico_wifi_channel_5,
  req.end()
 }
 exports.pppoeLoginByMac = pppoeLoginByMac;
-
+...
 
 
 # Acesse o genieacs pela interface web ex: IP:3000
