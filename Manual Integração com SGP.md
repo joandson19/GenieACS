@@ -160,7 +160,7 @@ declare("InternetGatewayDevice.LANDevice.*.Hosts.Host.*.MACAddress", {path: hour
 hourly});
 
 ## Acesse também admin >> provision e altere a bootstrap apagando tudo e incluindo os dados abaixo.
-
+```
 /*
 Realiza a configuração inicial para dispositivos da TP-Link.
 Se o dispositivo estiver com a tag NOT_PROVISION o script não será executado.
@@ -218,4 +218,4 @@ now}, {value: auth.wifi_password});
 {value: auth.wifi_channel});
  }
 }
-
+```
