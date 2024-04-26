@@ -234,10 +234,7 @@ now}, {value: auth.wifi_password});
 ![image](https://github.com/joandson19/GenieACS/assets/36518985/44e3192d-972f-4d0e-8b31-922295305192)
 
 ```
-{
- "url": "http://XXX.XXX.XXX.XXX:7557",
- "token": "INDEFINIDO"
-}
+{"url": "http://IP_DO_GENIEACS:7557", "token": "INDEFINIDO", "mac_filters": ["InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1.Username", "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.2.Username", "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANPPPConnection.1.Username", "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANPPPConnection.2.Username", "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANPPPConnection.1.Username", "InternetGatewayDevice.WANDevice.2.WANConnectionDevice.1.WANPPPConnection.1.Username", "InternetGatewayDevice.WANDevice.2.WANConnectionDevice.1.WANPPPConnection.2.Username", "InternetGatewayDevice.WANDevice.2.WANConnectionDevice.2.WANPPPConnection.1.Username", "InternetGatewayDevice.WANDevice.2.WANConnectionDevice.2.WANPPPConnection.2.Username"]}
 ```
 
 # Agora vamos configurar os dados do Roteador
